@@ -8,7 +8,7 @@ Widget textTittle(String text){
     mainAxisAlignment: MainAxisAlignment.start,
     children: [
       Padding(
-        padding: const EdgeInsets.only(top: 20.0,right: 20.0,left: 20.0,bottom: 10.0),
+        padding: const EdgeInsets.only(top: 20.0,right: 20.0,left: 20.0,bottom: 2.0),
         child: Text(text,style:fontStyle14,),
       ),
     ],
@@ -20,36 +20,71 @@ Widget textTittle(String text){
 
 
 
-class Tile extends StatelessWidget {
+class TileShipping extends StatelessWidget {
   late  String image;
   late String title;
   late String icon;
   late String subText;
 
-Tile(this.image,this.title,this.icon,this.subText);
+TileShipping(this.image,this.title,this.icon,this.subText);
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: Container(
-        color: const Color(0xF8F8F8),
-        width: 56.0,
-        height: 45.0,
+        color: const Color.fromRGBO(248, 248, 248, 1),
+        width: 40.0,
+        height: 40.0,
         child: Padding(
-          padding: const EdgeInsets.all(4.0),
-          child: Image(image: Svg(image),fit:BoxFit.fill,),
+          padding: const EdgeInsets.all(8.0),
+          child: Image(
+            width: 16.5,
+            height: 15,
+            image: Svg(image),fit:BoxFit.fill,),
         ),
       ),
       title:  Text(title,style:tittleStyle19,),
-      trailing: Container(
-        margin: const EdgeInsets.only(bottom: 20.0),
-        child:  SizedBox(
-          width: 15.0,
-          child: Image(
-            image: AssetImage(icon),),
-        ),
+      trailing: Padding(
+        padding: const EdgeInsets.only(bottom: 14.0),
+        child: Image(
+          width: 9.5,
+          height: 11.5,
+          color: const Color.fromRGBO(91, 91, 91, 1),
+          image: AssetImage(icon),),
       ),
       subtitle:  Text(subText),
+      tileColor: Colors.white,
+    );
+  }
+}
+class TilePayment extends StatelessWidget {
+  late  String image;
+  late String title;
+  late String icon;
+  late String subText;
+
+  TilePayment(this.image,this.title,this.icon,this.subText);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: Image(
+          width: 56.0,
+          height: 45.0,
+          image: Svg(image),fit:BoxFit.fill,),
+      ),
+      title:  Text(title,style:tittleStyle19,),
+      trailing: Padding(
+        padding: const EdgeInsets.only(bottom: 14.0),
+        child: Image(
+          width: 9.5,
+          height: 11.5,
+          color: const Color.fromRGBO(91, 91, 91, 1),
+          image: AssetImage(icon),),
+      ),
+      subtitle:  Text(subText,style: fontSub,),
       tileColor: Colors.white,
     );
   }
@@ -78,21 +113,25 @@ class Tile1 extends StatelessWidget {
      return  ListTile(
 
        leading: Container(
-         color:Colors.grey[200],
-         width: 44.0,
-         height: 44.0,
+         width: 64.0,
+         height: 64.0,
+         color: const Color.fromRGBO(248, 248, 248, 1),
          child: Padding(
            padding: const EdgeInsets.all(2.0),
            child: Image(image:AssetImage(image)),
          ),
        ),
-       title:  Text(title,style:tittleStyle19,),
+       title:  Padding(
+         padding: const EdgeInsets.only(bottom: 5.0),
+         child: Text(title,style:tittleStyle19,),
+       ),
+
+       subtitle:  Text(subText,style: fontSub,),
        trailing: Column(children: [
          Text(text1,style: trailTitle,),
          const SizedBox(height: 20.0,),
          Text(text2,style: fontSub,),
        ],),
-       subtitle:  Text(subText,style: fontSub,),
        tileColor: Colors.white,
      );
   }
@@ -106,19 +145,27 @@ class bottomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 185.0,
+      height: 214.0,
       decoration: BoxDecoration(
         color: const Color.fromRGBO(255, 255, 255, 1),
         border: Border.all(color: Colors.white70),
-        boxShadow: const [BoxShadow(color: Colors.black54)],
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            spreadRadius: 3,
+            blurRadius: 4,
+            offset: const Offset(1, 0),
+          ),
+        ],
         borderRadius: const BorderRadius.only(topRight: Radius.circular(30.0),topLeft:Radius.circular(30.0), ),
       ),
       child:Column(
         children: [
           const SizedBox(height: 20.0,),
           const BottomDivider(),
+          const SizedBox(height: 15.0,),
           Padding(
-            padding: const EdgeInsets.only(top: 10.0,left: 10.0,right: 10.0),
+            padding: const EdgeInsets.only(top: 10.0,left: 20.0,right: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
@@ -128,7 +175,7 @@ class bottomContainer extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 10.0,left: 10.0,right: 10.0),
+            padding: const EdgeInsets.only(top: 10.0,left: 20.0,right: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
@@ -138,7 +185,7 @@ class bottomContainer extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 10.0,left: 10.0,right: 10.0),
+            padding: const EdgeInsets.only(top: 10.0,left: 20.0,right: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [

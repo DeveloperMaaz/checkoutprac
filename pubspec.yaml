@@ -69,7 +69,7 @@ flutter:
     - assets/icons/headphoneorig.png
     - assets/icons/headp.png
     - assets/icons/arrow-right.png
-
+    - assets/icons/arrow-left.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

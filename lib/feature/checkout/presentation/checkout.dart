@@ -1,5 +1,6 @@
 import 'package:checkout/feature/checkout/presentation/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class Checkout extends StatefulWidget {
   const Checkout({Key? key}) : super(key: key);
@@ -13,8 +14,14 @@ class _CheckoutState extends State<Checkout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: const Image(
+            width: 24,
+            height: 24,
+            image: AssetImage('assets/icons/arrow-left.png')),
+        elevation: 0,
         backgroundColor: Colors.white,
-        title: const Center(
+        title: const Padding(
+          padding: EdgeInsets.only(left: 50.0),
           child: Text("Checkout",
             style: TextStyle(fontSize: 16.0,
               color: Colors.black,
@@ -26,30 +33,31 @@ class _CheckoutState extends State<Checkout> {
         children: [
           Container(
             color: Colors.white,
-            height: 300,
+            height: 270,
             child: SingleChildScrollView(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   textTittle("Shipping Address"),
 
-                  Tile("assets/icons/locat.svg",
+                  TileShipping("assets/icons/locat.svg",
                     "Home Address",
                     "assets/icons/right-arrow.png",
-                    "soo 16 sandbanks 673468734 ",
+                    "soo 16 sandbanks 8789",
                   ),
 
                   dividerScreen(),
 
                   textTittle("Payment method"),
 
-                  Tile("assets/icons/card.svg",
+                  TilePayment("assets/icons/card.svg",
                       "Butler Balance",
                       "assets/icons/right-arrow.png",
                       "\$ 900.0 "),
 
                   dividerScreen(),
 
-                  textTittle("Order now"),
+                  textTittle("Your Order"),
 
                   Tile1("assets/icons/Rectangle 51.png",
                       "Beats two tune free wireless ",
