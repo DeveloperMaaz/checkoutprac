@@ -3,17 +3,25 @@ import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-Widget textTittle(String text){
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.start,
-    children: [
-      Padding(
-        padding: const EdgeInsets.only(top: 20.0,right: 20.0,left: 20.0,bottom: 2.0),
-        child: Text(text,style:fontStyle14,),
-      ),
-    ],
-  );
+
+class TextTitle extends StatelessWidget {
+
+  late String text;
+  TextTitle(this.text);
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 20.0,right: 20.0,left: 20.0,bottom: 2.0),
+          child: Text(text,style:fontStyle14,),
+        ),
+      ],
+    );
+  }
 }
+
 
 
 //String image,String title,String icon,String subText

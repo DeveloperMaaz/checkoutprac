@@ -38,7 +38,7 @@ class _CheckoutState extends State<Checkout> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  textTittle("Shipping Address"),
+                  TextTitle("Shipping Address"),
 
                   TileShipping("assets/icons/locat.svg",
                     "Home Address",
@@ -48,7 +48,7 @@ class _CheckoutState extends State<Checkout> {
 
                   dividerScreen(),
 
-                  textTittle("Payment method"),
+                  TextTitle("Payment method"),
 
                   TilePayment("assets/icons/card.svg",
                       "Butler Balance",
@@ -57,7 +57,7 @@ class _CheckoutState extends State<Checkout> {
 
                   dividerScreen(),
 
-                  textTittle("Your Order"),
+                  TextTitle("Your Order"),
 
                   Tile1("assets/icons/Rectangle 51.png",
                       "Beats two tune free wireless ",
