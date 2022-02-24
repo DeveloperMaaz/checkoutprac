@@ -1,5 +1,3 @@
 # checkoutprac
-
-![IMG-20220223-WA0015](https://user-images.githubusercontent.com/88537392/155337158-79ddcbb4-97b6-4dc3-8689-9a6e3cb54118.jpg)
-
-![IMG-20220223-WA0016](https://user-images.githubusercontent.com/88537392/155337299-b18656a5-45b9-4453-a23a-2eee9de497fc.jpg)
+![WhatsApp Image 2022-02-24 at 2 58 51 PM (1)](https://user-images.githubusercontent.com/88537392/155502488-726509cf-a578-43eb-8aaf-723900d65428.jpeg)
+![WhatsApp Image 2022-02-24 at 2 58 51 PM](https://user-images.githubusercontent.com/88537392/155502539-871bf15d-8574-47ac-adcd-8915702e0219.jpeg)
